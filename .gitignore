@@ -1,0 +1,24 @@
+# Secrets and credentials
+*.key
+*.pem
+*.crt
+*.p12
+.env
+.env.*
+secrets/
+credentials/
+
+# VPN files
+wg*.conf
+wireguard/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp

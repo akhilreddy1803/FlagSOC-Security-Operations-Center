@@ -1,0 +1,12 @@
+<!-- FLAGSOC-DET-002: Successful Login After Brute Force -->
+<rule id="100101" level="13" timeframe="300">
+  <if_sid>60118</if_sid>
+  <if_matched_sid>100100</if_matched_sid>
+  <same_field>win.eventdata.targetUserName</same_field>
+  <description>FLAGSOC-DET-002: Successful login after brute force detected for user '$(win.eventdata.targetUserName)'</description>
+  <group>flagsoc,windows,authentication,brute_force,successful_login,credential_access</group>
+  <mitre>
+    <id>T1110</id>
+    <id>T1078</id>
+  </mitre>
+</rule>

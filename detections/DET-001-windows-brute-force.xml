@@ -1,0 +1,12 @@
+<!-- FLAGSOC-DET-001: Windows Local Brute Force -->
+<group name="flagsoc,windows,authentication">
+  <rule id="100100" level="12" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <same_field>win.eventdata.targetUserName</same_field>
+    <description>FLAGSOC-DET-001: Windows Local Brute Force detected against user '$(win.eventdata.targetUserName)'</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+    <group>flagsoc,windows,authentication,brute_force,successful_login,credential_access</group>
+  </rule>
+</group>

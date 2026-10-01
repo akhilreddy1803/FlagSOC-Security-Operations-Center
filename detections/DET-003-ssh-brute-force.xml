@@ -1,0 +1,11 @@
+<!-- FLAGSOC-DET-003: SSH Brute Force -->
+<group name="flagsoc,linux,ssh">
+  <rule id="100102" level="12" frequency="3" timeframe="60">
+    <if_matched_sid>5503</if_matched_sid>
+    <description>FLAGSOC-DET-003: SSH brute force detected against user '$(dstuser)' from IP '$(srcip)'</description>
+    <group>flagsoc,linux,ssh,brute_force,credential_access</group>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+</group>
